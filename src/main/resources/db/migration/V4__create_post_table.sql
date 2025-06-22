@@ -1,14 +1,14 @@
 create table post
 (
-    id           char(36) primary key,
+    id           binary(16) primary key,
     title        varchar(255) not null,
     content      text         not null,
     created_at   datetime     not null,
     updated_at   datetime     not null,
     status       varchar(50)  not null,
     reading_time int          not null,
-    author_id    char(36)     not null,
-    category_id  char(36)     not null,
+    author_id    binary(16)     not null,
+    category_id  binary(16)     not null,
     constraint fk_post_author
         foreign key (author_id)
             references author (id)

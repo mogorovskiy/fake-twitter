@@ -1,7 +1,7 @@
 create table post_tag
 (
-    post_id char(36) not null,
-    tag_id  char(36) not null,
+    post_id binary(16) not null,
+    tag_id  binary(16) not null,
     primary key (post_id, tag_id),
     constraint fk_post_tag_post
         foreign key (post_id)
