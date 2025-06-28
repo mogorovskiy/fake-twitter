@@ -27,6 +27,6 @@ public class CategoryServiceImpl implements CategoryService {
         if (categoryRepository.existsByNameIgnoreCase(categoryName)) {
             throw new IllegalArgumentException("Category already exists with name:" + categoryName);
         }
-        categoryRepository.save(category);
+        return categoryRepository.save(category);
     }
 }
